@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Temperature Converter</h1>
+            <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin</p>
+        </header>
+        
+        <div class="converter-card">
+            <div class="input-group">
+                <label for="temperature">Enter Temperature:</label>
+                <input type="number" id="temperature" placeholder="Enter temperature value" step="any">
+            </div>
+            
+            <div class="scale-selection">
+                <label>From:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="fromScale" value="celsius" checked>
+                        <span>Celsius (°C)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="fromScale" value="fahrenheit">
+                        <span>Fahrenheit (°F)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="fromScale" value="kelvin">
+                        <span>Kelvin (K)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <button id="convertBtn" class="convert-btn">Convert</button>
+            
+            <div class="results" id="results">
+                <div class="result-item">
+                    <span class="scale-name">Celsius:</span>
+                    <span class="result-value" id="celsiusResult">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="scale-name">Fahrenheit:</span>
+                    <span class="result-value" id="fahrenheitResult">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="scale-name">Kelvin:</span>
+                    <span class="result-value" id="kelvinResult">--</span>
+                </div>
+            </div>
+            
+            <div class="formula-display" id="formulaDisplay">
+                <h3>Formula Used:</h3>
+                <p id="formulaText"></p>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>Temperature Scale Information</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Celsius (°C)</h4>
+                    <p>Water freezes at 0°C and boils at 100°C</p>
+                </div>
+                <div class="info-card">
+                    <h4>Fahrenheit (°F)</h4>
+                    <p>Water freezes at 32°F and boils at 212°F</p>
+                </div>
+                <div class="info-card">
+                    <h4>Kelvin (K)</h4>
+                    <p>Absolute zero is 0K (-273.15°C)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
